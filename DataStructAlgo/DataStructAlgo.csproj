@@ -42,10 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStructures\Lists\DoublyLinkedList.cs" />
+    <Compile Include="DataStructures\Array\ArrayList.cs" />
     <Compile Include="DataStructures\Lists\DoublyLinkedListNode.cs" />
+    <Compile Include="DataStructures\Lists\DoublyLinkedList.cs" />
     <Compile Include="DataStructures\Lists\LinkedList.cs" />
     <Compile Include="DataStructures\Lists\LinkedListNode.cs" />
+    <Compile Include="DataStructures\Queues\QueueArray.cs" />
+    <Compile Include="DataStructures\Queues\QueueList.cs" />
+    <Compile Include="DataStructures\Staks\StackList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,9 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Algorithms\Sorting\" />
-    <Folder Include="DataStructures\Array\" />
-    <Folder Include="DataStructures\Queues\" />
-    <Folder Include="DataStructures\Staks\" />
     <Folder Include="DataStructures\Trees\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
