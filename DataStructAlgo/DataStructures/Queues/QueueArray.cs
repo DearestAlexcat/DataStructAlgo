@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace DataStructAlgo.DataStructures.Queues
 {
-    class QueueArray<T>
+    class Deque<T>
     {
-
         T[] _array = new T[0];
 
         int _head;
@@ -21,9 +20,9 @@ namespace DataStructAlgo.DataStructures.Queues
             private set;
         }
 
-        public QueueArray() : this(0) { }
+        public Deque() : this(0) { }
 
-        public QueueArray(int capacity)
+        public Deque(int capacity)
         {
             if(capacity < 0)
             {
