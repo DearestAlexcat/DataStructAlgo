@@ -30,7 +30,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if(_items.Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             T result = _items.First.Value;
@@ -44,7 +44,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if (_items.Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             T result = _items.Last.Value;
@@ -58,7 +58,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if (_items.Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             return _items.First.Value;
@@ -68,7 +68,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if (_items.Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             return _items.Last.Value;

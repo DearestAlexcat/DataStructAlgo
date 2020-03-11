@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace DataStructAlgo.DataStructures.Lists
 {
-    class LinkedListNode
+    class LinkedListNode<T>
     {
+        public LinkedListNode(T value)
+        {
+            this.Value = value;
+        }
+
+        public T Value
+        {
+            get;
+            set;
+        }
+
+        public T Next
+        {
+            get;
+            set;
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if(capacity < 0)
             {
-                throw new ArgumentException();
+                throw new ArgumentException("Capacity must be positive");
             }
 
             _array = new T[capacity];
@@ -121,7 +121,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if(Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             if(_head == _array.Length)
@@ -138,7 +138,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if (Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             if (_tail < 0)
@@ -155,7 +155,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if (Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             return _array[_head];
@@ -165,7 +165,7 @@ namespace DataStructAlgo.DataStructures.Queues
         {
             if (Count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Deque is empty");
             }
 
             return _array[_tail];
