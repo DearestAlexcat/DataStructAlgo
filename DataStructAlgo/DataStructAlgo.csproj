@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Sorting\BubbleSort.cs" />
+    <Compile Include="Algorithms\Sorting\Enums.cs" />
+    <Compile Include="Algorithms\Sorting\InsertionSort.cs" />
+    <Compile Include="Algorithms\Sorting\Predicate.cs" />
+    <Compile Include="Algorithms\Sorting\QuickSort.cs" />
+    <Compile Include="Algorithms\Sorting\SelectionSort.cs" />
     <Compile Include="DataStructures\Array\ArrayList.cs" />
     <Compile Include="DataStructures\Lists\DoublyLinkedListNode.cs" />
     <Compile Include="DataStructures\Lists\DoublyLinkedList.cs" />
@@ -59,7 +65,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Algorithms\Sorting\" />
     <Folder Include="DataStructures\Trees\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
