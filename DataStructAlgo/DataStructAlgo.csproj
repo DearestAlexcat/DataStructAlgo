@@ -47,9 +47,11 @@
     <Compile Include="DataStructures\Lists\DoublyLinkedList.cs" />
     <Compile Include="DataStructures\Lists\LinkedList.cs" />
     <Compile Include="DataStructures\Lists\LinkedListNode.cs" />
-    <Compile Include="DataStructures\Queues\QueueArray.cs" />
-    <Compile Include="DataStructures\Queues\QueueList.cs" />
-    <Compile Include="DataStructures\Staks\StackList.cs" />
+    <Compile Include="DataStructures\Queues\DequeArray.cs" />
+    <Compile Include="DataStructures\Queues\DequeList.cs" />
+    <Compile Include="DataStructures\Queues\Queue.cs" />
+    <Compile Include="DataStructures\Sets\Set.cs" />
+    <Compile Include="DataStructures\Stacks\StackList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
