@@ -45,6 +45,7 @@
     <Compile Include="Algorithms\Sorting\BubbleSort.cs" />
     <Compile Include="Algorithms\Sorting\Enums.cs" />
     <Compile Include="Algorithms\Sorting\InsertionSort.cs" />
+    <Compile Include="Algorithms\Sorting\MargeSort.cs" />
     <Compile Include="Algorithms\Sorting\Predicate.cs" />
     <Compile Include="Algorithms\Sorting\QuickSort.cs" />
     <Compile Include="Algorithms\Sorting\SelectionSort.cs" />

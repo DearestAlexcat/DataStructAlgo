@@ -60,7 +60,6 @@ namespace DataStructAlgo.Algorithms.Sorting
             QuickSort<T>(list, 0, list.Count, SortOrder.ascending, comparer);
         }
 
-
         public static void QuickSort<T>(this IList<T> list,int index, int count, SortOrder order = SortOrder.ascending, IComparer<T> comparer = null)
         {
             if (list.Count == 0)
@@ -89,16 +88,23 @@ namespace DataStructAlgo.Algorithms.Sorting
                 ? (T x, T y) => { return comparer.Compare(x, y) < 0; }
                 : comparison = (T x, T y) => { return comparer.Compare(x, y) > 0; };
 
-            T temp;
             int lastIndex = index + count - 1;
-            int pivot = (lastIndex + index) / 2;
-            int i = index;
-            int j = count - 1;
+
+            QuickSort<T>(list, index, lastIndex, comparison);
+        }
+
+        static void QuickSort<T>(this IList<T> list, int left, int right, Predicate<T> comparison)
+        {
+            T temp;
             
+            int pivot = (right + left) / 2;
+            int i = left;
+            int j = right;
+
             do
             {
-                while (i < lastIndex && comparison(list[pivot], list[i])) i++;
-                while (j > index && comparison(list[j], list[pivot]))  j--;
+                while (i < right && comparison(list[pivot], list[i])) i++;
+                while (j > left && comparison(list[j], list[pivot])) j--;
 
                 if (i <= j)
                 {
@@ -111,9 +117,8 @@ namespace DataStructAlgo.Algorithms.Sorting
 
             } while (i <= j);
 
-            if (i < lastIndex)  QuickSort(list, i,     lastIndex,  order, comparer);
-            if (j > index)      QuickSort(list, index, j,          order, comparer);
-
+            if (i < right) QuickSort(list, i, right, comparison);
+            if (j > left) QuickSort(list, left, j, comparison);
         }
     }
 }
