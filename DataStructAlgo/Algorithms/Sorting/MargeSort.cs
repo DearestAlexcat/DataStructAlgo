@@ -103,8 +103,6 @@ namespace DataStructAlgo.Algorithms.Sorting
                 return;
             }
 
-            int lastIndex = index + count - 1;
-
             int sizeL = count / 2;
             int sizeR = count - sizeL;
 
