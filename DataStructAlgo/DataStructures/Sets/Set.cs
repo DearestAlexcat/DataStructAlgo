@@ -7,7 +7,6 @@ namespace DataStructAlgo.DataStructures.Sets
 {
     class Set<T> : IEnumerable<T>
     {
-
         List<T> _items = new List<T>();
 
         public int Count

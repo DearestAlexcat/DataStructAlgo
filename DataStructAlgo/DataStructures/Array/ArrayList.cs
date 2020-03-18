@@ -9,7 +9,6 @@ namespace DataStructAlgo.DataStructures.Array
 {
     class ArrayList<T> : IEnumerable<T>
     {
-
         T[] _items = null;
 
         public int Count
@@ -40,6 +39,30 @@ namespace DataStructAlgo.DataStructures.Array
             {
                 _items[index++] = item;
                 Count++;
+            }
+        }
+
+        public T this[int index]
+        {
+            get
+            {
+                if(index < Count)
+                {
+                    return _items[index];
+                }
+
+                throw new IndexOutOfRangeException();
+            }
+            set
+            {
+                if (index < Count)
+                {
+                     _items[index] = value;
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException();
+                }
             }
         }
 

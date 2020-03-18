@@ -55,7 +55,10 @@
     <Compile Include="Algorithms\Sorting\Simple versions\QuickSort.cs" />
     <Compile Include="Algorithms\Sorting\Simple versions\SelectionSort.cs" />
     <Compile Include="DataStructures\Array\ArrayList.cs" />
-    <Compile Include="DataStructures\HashTable\Class1.cs" />
+    <Compile Include="DataStructures\HashTable\HashTable.cs" />
+    <Compile Include="DataStructures\HashTable\HashTableArray.cs" />
+    <Compile Include="DataStructures\HashTable\HashTableArrayNode.cs" />
+    <Compile Include="DataStructures\HashTable\HashTableNodePair.cs" />
     <Compile Include="DataStructures\Lists\DoublyLinkedListNode.cs" />
     <Compile Include="DataStructures\Lists\DoublyLinkedList.cs" />
     <Compile Include="DataStructures\Lists\LinkedList.cs" />

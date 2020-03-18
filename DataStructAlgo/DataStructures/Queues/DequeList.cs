@@ -8,7 +8,6 @@ namespace DataStructAlgo.DataStructures.Queues
 {
     class DequeLinkedList<T>
     {
-
         LinkedList<T> _items = new LinkedList<T>();
 
         public int Count
