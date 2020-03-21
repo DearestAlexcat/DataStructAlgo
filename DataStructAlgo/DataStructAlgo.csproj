@@ -68,14 +68,14 @@
     <Compile Include="DataStructures\Queues\Queue.cs" />
     <Compile Include="DataStructures\Sets\Set.cs" />
     <Compile Include="DataStructures\Stacks\StackList.cs" />
+    <Compile Include="DataStructures\Trees\BinaryTree.cs" />
+    <Compile Include="DataStructures\Trees\BinaryTreeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataStructures\Trees\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,4 @@
-﻿
-namespace DataStructAlgo.Algorithms.Sorting
+﻿namespace DataStructAlgo.Algorithms.Sorting
 {
     public enum SortOrder
     {
