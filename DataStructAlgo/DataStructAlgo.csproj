@@ -49,11 +49,13 @@
     <Compile Include="Algorithms\Sorting\Predicate.cs" />
     <Compile Include="Algorithms\Sorting\QuickSort.cs" />
     <Compile Include="Algorithms\Sorting\SelectionSort.cs" />
+    <Compile Include="Algorithms\Sorting\ShellSort.cs" />
     <Compile Include="Algorithms\Sorting\Simple versions\BubbleSort.cs" />
     <Compile Include="Algorithms\Sorting\Simple versions\InsertionSort.cs" />
     <Compile Include="Algorithms\Sorting\Simple versions\MargeSort.cs" />
     <Compile Include="Algorithms\Sorting\Simple versions\QuickSort.cs" />
     <Compile Include="Algorithms\Sorting\Simple versions\SelectionSort.cs" />
+    <Compile Include="Algorithms\Sorting\Simple versions\ShellSort.cs" />
     <Compile Include="DataStructures\Array\ArrayList.cs" />
     <Compile Include="DataStructures\HashTable\HashTable.cs" />
     <Compile Include="DataStructures\HashTable\HashTableArray.cs" />

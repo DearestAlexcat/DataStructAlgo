@@ -11,7 +11,7 @@ namespace DataStructAlgo
         static void Main(string[] args)
         {
 
-            BinaryTree<int> tree = new BinaryTree<int>();
+            /*BinaryTree<int> tree = new BinaryTree<int>();
 
             tree.Add(8);
 
@@ -31,8 +31,16 @@ namespace DataStructAlgo
             tree.Add(13);
             tree.Add(15);
 
-            tree.PreOrder2();
+            tree.PreOrder2();*/
 
+            int[] arr = { 4, 3, 2, 5, 1 };
+
+            DataStructAlgo.Algorithms.Sorting.ShellSorter.ShellSort<int>(arr);
+
+            foreach (int item in arr)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
         }
