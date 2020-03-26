@@ -19,7 +19,7 @@ namespace DataStructAlgo.DataStructures.Lists
             set;
         }
 
-        public T Next
+        public LinkedListNode<T> Next
         {
             get;
             set;
