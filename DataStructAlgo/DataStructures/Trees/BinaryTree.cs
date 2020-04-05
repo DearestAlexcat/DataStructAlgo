@@ -178,7 +178,6 @@ namespace DataStructAlgo.DataStructures.Trees
 
         #endregion
     
-
         public bool Remove(T value)
         {
             BinaryTreeNode<T> parent;
@@ -271,101 +270,86 @@ namespace DataStructAlgo.DataStructures.Trees
             return true;
         }
 
-
         public void Clear()
         {
             _root = null;
             Count = 0;
         }
 
+        #region Recursion order 
 
-        public void PreOrder(BinaryTreeNode<T> start_root = null)
+        private void PreOrder(BinaryTreeNode<T> root, List<T> list)
         {
-            if(_root == null)
+            list.Add(root.Value);
+
+            if (root.Left != null)
             {
-                return;
+                PreOrder(root.Left, list);
             }
 
-            if(start_root == null)
+            if (root.Right != null)
             {
-                start_root = _root;
-            }
-
-            Console.Write(start_root.Value + " ");
-
-            if (start_root.Left != null)
-            {
-                PreOrder(start_root.Left);
-            }
-            if (start_root.Right != null)
-            {
-                PreOrder(start_root.Right);
+                PreOrder(root.Right, list);
             }
         }
 
-        public void PreOrder2()
+        public T[] PreOrder()
         {
-            if (_root == null)
+            List<T> result = null;
+            PreOrder(_root, result);
+            return result.ToArray();
+        }
+
+        private void PostOrder(Stack<T> stack, BinaryTreeNode<T> root)
+        {
+            stack.Push(root.Value);
+
+            if (root.Right != null)
             {
-                return;
+                PostOrder(stack, root.Right);
             }
 
-            BinaryTreeNode<T> start_root = _root;
-            Stack<BinaryTreeNode<T>> stack = new Stack<BinaryTreeNode<T>>();
-
-            bool left = true, right = false;
-
-            do
+            if (root.Left != null)
             {
-
-                while (left)
-                {
-                    Console.WriteLine(start_root.Value);
-
-                    if (start_root.Left != null)
-                    {
-                        stack.Push(start_root);
-                        start_root = start_root.Left;   
-                    }
-                    else
-                    {
-                        start_root = stack.Pop();
-                        right = true;
-                        left = false;
-                    }
-                }
-
-                while (right)
-                {
-
-                    Console.WriteLine(start_root.Value);
-
-                    if (start_root.Right != null)
-                    {
-                        stack.Push(start_root);
-                        start_root = start_root.Right;
-                    }
-                    else
-                    {
-                        start_root = stack.Pop();
-                        right = false;
-                        left = true;
-                    }
-                }    
-
-            } while (stack.Count > 0);
+                PostOrder(stack, root.Left);
+            }
         }
 
-
-        public void PostOrder()
+        public T[] PostOrder()
         {
-
+            Stack<T> stack = new Stack<T>();
+            PostOrder(stack, _root);
+            return stack.ToArray();
         }
 
-        public void InOrder()
+        private void InOrder(Queue<T> queue, BinaryTreeNode<T> root)
         {
+            if (root.Left != null)
+            {
+                InOrder(queue, root.Left);
+                queue.Enqueue(root.Value);    //adds parent
+            }
+            else
+            {
+                queue.Enqueue(root.Value); //adds left or right
+            }
 
+            if (root.Right != null)
+            {
+                InOrder(queue, root.Right);
+            }
         }
+
+        public T[] InOrder()
+        {
+            Queue<T> queue = new Queue<T>();
+
+            InOrder(queue, _root);
+
+            return queue.ToArray();
+        }
+
+        #endregion
 
         public IEnumerator<T> GetEnumerator()
         {
