@@ -1,47 +1,25 @@
-﻿using DataStructAlgo.DataStructures.Trees;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DataStructAlgo.DataStructures.Trees;
+using System.Linq;
+using System.Threading;
+using DataStructAlgo.Algorithms.Breadth_Depth_first;
 
 namespace DataStructAlgo
 {
-
     class Program
     {
         static void Main(string[] args)
         {
+            Map map = new Map(40, 20);
 
-            /*BinaryTree<int> tree = new BinaryTree<int>();
+            map.SetMap(300);     
+            //map.FillFor(20, 10);
+            //map.FillQueue(20, 10);       
+            //map.FillStack(20, 10);
 
-            tree.Add(8);
-
-            tree.Add(4);
-            tree.Add(2);
-            tree.Add(1);
-            tree.Add(3);
-            tree.Add(6);
-            tree.Add(5);
-            tree.Add(7);
-
-            tree.Add(12);
-            tree.Add(10);
-            tree.Add(9);
-            tree.Add(11);
-            tree.Add(14);
-            tree.Add(13);
-            tree.Add(15);
-
-            tree.PreOrder2();*/
-
-            int[] arr = { 4, 3, 2, 5, 1 };
-
-            DataStructAlgo.Algorithms.Sorting.ShellSorter.ShellSort<int>(arr);
-
-            foreach (int item in arr)
-            {
-                Console.WriteLine(item);
-            }
-
+            map.FillDepth(20, 10);
             Console.ReadKey();
         }
     }
