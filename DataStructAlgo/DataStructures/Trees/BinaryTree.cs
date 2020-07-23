@@ -18,40 +18,41 @@ namespace DataStructAlgo.DataStructures.Trees
 
         private void AddTo(T value, BinaryTreeNode<T> root)
         {
-            if (root != null)
+            if(root.CompareTo(value) > 0)
             {
-                if(root.CompareTo(value) > 0)
+                if(root.Left == null)
                 {
-                    if(root.Left == null)
-                    {
-                        root.Left = new BinaryTreeNode<T>(value);
-                    }
-                    else
-                    {
-                        AddTo(value, root.Left);
-                    }
+                    root.Left = new BinaryTreeNode<T>(value);
                 }
                 else
                 {
-                    if (root.Right == null)
-                    {
-                        root.Right = new BinaryTreeNode<T>(value);
-                    }
-                    else
-                    {
-                        AddTo(value, root.Right);
-                    }
+                    AddTo(value, root.Left);
                 }
             }
             else
             {
-                _root = new BinaryTreeNode<T>(value);
+                if (root.Right == null)
+                {
+                    root.Right = new BinaryTreeNode<T>(value);
+                }
+                else
+                {
+                    AddTo(value, root.Right);
+                }
             }
         }
 
         public void Add(T value)
         {
-            AddTo(value, _root);
+            if (_root == null)
+            {
+                _root = new BinaryTreeNode<T>(value);
+            }
+            else
+            {
+                AddTo(value, _root);
+            }
+           
             Count++;
         }
 
@@ -150,22 +151,22 @@ namespace DataStructAlgo.DataStructures.Trees
             if (_root == null)
                 return null;
 
-            BinaryTreeNode<T> currentRoot = _root;
+            BinaryTreeNode<T> current = _root;
             int result;
 
-            while (true)
+            while (current != null)
             {
-                result = currentRoot.CompareTo(value);
+                result = current.CompareTo(value);
 
                 if(result > 0)
                 {
-                    parent = currentRoot;
-                    currentRoot = _root.Left;
+                    parent = current;
+                    current = _root.Left;
                 }
                 else if(result < 0)
                 {
-                    parent = currentRoot;
-                    currentRoot = _root.Right;
+                    parent = current;
+                    current = _root.Right;
                 }
                 else
                 {
@@ -173,7 +174,7 @@ namespace DataStructAlgo.DataStructures.Trees
                 }
             }
 
-            return currentRoot;
+            return current;
         }
 
         #endregion
@@ -295,7 +296,7 @@ namespace DataStructAlgo.DataStructures.Trees
 
         public T[] PreOrder()
         {
-            List<T> result = null;
+            List<T> result = new List<T>();
             PreOrder(_root, result);
             return result.ToArray();
         }
