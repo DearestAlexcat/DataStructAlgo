@@ -37,12 +37,12 @@
  * [Shell Sort](DataStructAlgo/Algorithms/Sorting/ShellSort.cs)
 
  ### Simple versions sorting:
- * [Bubble Sort](DataStructAlgo/Algorithms/Sorting/Simple versions/BubbleSort.cs)
- * [Insertion Sort](DataStructAlgo/Algorithms/Sorting/Simple versions/InsertionSort.cs)
- * [Selection Sort](DataStructAlgo/Algorithms/Sorting/Simple versions/SelectionSort.cs)
- * [Marge Sort](DataStructAlgo/Algorithms/Sorting/Simple versions/MargeSort.cs)
- * [Quick Sort](DataStructAlgo/Algorithms/Sorting/Simple versions/QuickSort.cs)
- * [Shell Sort](DataStructAlgo/Algorithms/Sorting/Simple versions/ShellSort.cs)
+ * [Bubble Sort](DataStructAlgo/Algorithms/Sorting/Simple-Versions/BubbleSort.cs)
+ * [Insertion Sort](DataStructAlgo/Algorithms/Sorting/Simple-Versions/InsertionSort.cs)
+ * [Selection Sort](DataStructAlgo/Algorithms/Sorting/Simple-Versions/SelectionSort.cs)
+ * [Marge Sort](DataStructAlgo/Algorithms/Sorting/Simple-Versions/MargeSort.cs)
+ * [Quick Sort](DataStructAlgo/Algorithms/Sorting/Simple-Versions/QuickSort.cs)
+ * [Shell Sort](DataStructAlgo/Algorithms/Sorting/Simple-Versions/ShellSort.cs)
 
  ### Breadth-Depth-first:
   * [Breadth-Depth-first](DataStructAlgo/Algorithms/Breadth-Depth-first/Map.cs)	
