@@ -13,7 +13,7 @@
  * [LinkedList](DataStructAlgo/DataStructures/Lists/)
 
  ### Queues:
- * [Array Queue](DataStructAlgo/DataStructures/Queues/DequeArray.cs)
+ * [Array Deque](DataStructAlgo/DataStructures/Queues/DequeArray.cs)
  * [Deque List](DataStructAlgo/DataStructures/Queues/DequeList.cs)
  * [Linked Queue](DataStructAlgo/DataStructures/Queues/Queue.cs)
 
