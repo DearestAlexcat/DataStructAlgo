@@ -20,9 +20,7 @@ namespace DataStructAlgo
 
             //map.FillDepth(20, 10);
 
-
             BinaryTree<int> three = new BinaryTree<int>();
-
 
             three.Add(8);
             three.Add(4);
@@ -39,7 +37,6 @@ namespace DataStructAlgo
             three.Add(11);
             three.Add(13);
             three.Add(15);
-
           
             foreach (var item in three.PreOrder())
             {
