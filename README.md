@@ -15,7 +15,7 @@
  ### Queues:
  * [Array Queue](DataStructAlgo/DataStructures/Queues/DequeArray.cs)
  * [Deque List](DataStructAlgo/DataStructures/Queues/DequeList.cs)
- * [Linked Queue](DataStructures/Queues/Queue.cs)
+ * [Linked Queue](DataStructAlgo/DataStructures/Queues/Queue.cs)
 
  ### Sets:
  * [Set](DataStructAlgo/DataStructures/Sets/Set.cs)
