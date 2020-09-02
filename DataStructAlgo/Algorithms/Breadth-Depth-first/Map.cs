@@ -46,6 +46,12 @@ namespace DataStructAlgo.Algorithms.Breadth_Depth_first
             }
         }
 
+        public void Clear()
+        {
+            Console.Clear();
+            map = new int[size_x, size_y];
+        }
+
         public void SetElement(int x, int y, int number)
         {
             map[x, y] = number;
@@ -127,7 +133,7 @@ namespace DataStructAlgo.Algorithms.Breadth_Depth_first
 
                 SetElement(px, py, 2);
 
-                Thread.Sleep(50);
+                Thread.Sleep(100);
 
                 if (CheckСoordinate(px - 1, py))
                 {
@@ -172,7 +178,7 @@ namespace DataStructAlgo.Algorithms.Breadth_Depth_first
 
                 SetElement(px, py, 2);
 
-                Thread.Sleep(50);
+                Thread.Sleep(100);
 
                 if (CheckСoordinate(px - 1, py))
                 {
@@ -202,7 +208,7 @@ namespace DataStructAlgo.Algorithms.Breadth_Depth_first
             if (!CheckСoordinate(x, y))
                 return;
 
-            Thread.Sleep(50);
+            Thread.Sleep(100);
             SetElement(x, y, 3);
 
             FillDepth(x - 1, y);

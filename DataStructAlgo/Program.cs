@@ -20,7 +20,7 @@ namespace DataStructAlgo
 
             //map.FillDepth(20, 10);
 
-            BinaryTree<int> three = new BinaryTree<int>();
+            /*BinaryTree<int> three = new BinaryTree<int>();
 
             three.Add(8);
             three.Add(4);
@@ -52,11 +52,17 @@ namespace DataStructAlgo
             {
                 Console.Write(item + " ");
             }
-            Console.WriteLine();
+            Console.WriteLine();*/
 
+            Map map = new Map(40, 20);
+            map.SetMap(400);
+            map.FillStack(20, 10);
 
+            Thread.Sleep(500);
 
-
+            map.Clear();
+            map.SetMap(400);
+            map.FillDepth(20, 10);
 
             Console.ReadKey();
         }
